@@ -61,6 +61,8 @@ The `mqtt` object have the following functions:
 ### mqtt.getCreds
 The function `getCreds( user, pass )` returns an object `{ user: USERNAME, pass:PASSWORD, source:SOURCE }` where SOURCE is a string that describes how the credentials were retrieved: 
 
+|source|description|
+|--------|-----------|
 |`'CODE'` | if USERNAME and PASSWORD were provided as arguments (and not just empty strings)|
 |`'URL'` | if the url contains the credentials, like  `...&mqttuser:USERNAME&mqttpass:PASSWORD`|
 |`'STORE'` | if sessionStorage contains items `mqttuser` and `mqttpass`|
