@@ -45,3 +45,23 @@ Examples of call back functions:
         document.getElementById('errorline').innerHTML = 'Error: ' + err ;
       } 
 ~~~
+
+## Wrapper functions
+The `mqtt` object have the following functions:
+
+|function|description|
+|--------|-----------|
+|`begin( )` | called at start but also for retrials   |       
+|`subscribe( topic )` | Start subscription for `topic`. Topic may include wildcards `#` and `+`.   |       
+|`unsubscribe( topic )`  | Stop subscription for `topic`.  |       
+|`send( topic, payload )`  | Publish a (non-retained) message with `topic` and `payload`.  |       
+|`sendRetained( topic, payload )`  | Publish a retained message with `topic` and `payload`.  |       
+|`getCreds( user, pass )`|Get MQTT credentials object. See below. |   
+
+### mqtt.getCreds
+The function `getCreds( user, pass )` returns an object `{ user: USERNAME, pass:PASSWORD, source:SOURCE }` where SOURCE is a string that describes how the credentials were retrieved: 
+
+|`'CODE'` | if USERNAME and PASSWORD were provided as arguments (and not just empty strings)|
+|`'URL'` | if the url contains the credentials, like  `...&mqttuser:USERNAME&mqttpass:PASSWORD`|
+|`'STORE'` | if sessionStorage contains items `mqttuser` and `mqttpass`|
+|`'PROMPT'` | if USERNAME and PASSWORD are prompted for and entered|
