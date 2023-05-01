@@ -1,5 +1,5 @@
 # MQTT wrapper
-JavaScript support based on [Eclipse Paho JavaScript client](https://github.com/eclipse/paho.mqtt.javascript).
+The MQTT JavaScript support based on [Eclipse Paho JavaScript client](https://github.com/eclipse/paho.mqtt.javascript).
 Configuration data and functions are provided as properties of the `mqtt` object.
 
 ## Include files
