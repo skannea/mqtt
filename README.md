@@ -12,8 +12,8 @@ The `mqtt.config` object have the following properties:
 
 |property|description|example|conditions
 |--------|-----------|-------|---------
-|userName | MQTT credential   |       |required when broker access is restricted 
-|password | MQTT credential   |       |required when broker access is restricted 
+|userName | MQTT credential   |       |required when access to broker is restricted 
+|password | MQTT credential   |       |required when access to broker is restricted
 |host | URL or ip-address of broker   | 'mqtt.myveryown.duckdns.org', '192.168.47.11'      |required when MQTT broker access is restricted 
 |port | Port to access broker.   | see  |required
 |useSSL | When true, a secure connection will be used. | true      |required
